@@ -1,0 +1,11 @@
+{
+  "/api/*": {
+    "target": "https://serviziweb.asur.marche.it",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

@@ -1,0 +1,270 @@
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Filter Actions */
+.filter-actions {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sorting-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1976d2;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sorting-info mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Header con filtri */
+.header-with-filter {
+  padding: 12px 8px !important;
+  vertical-align: top !important;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 80px;
+}
+
+.sort-area {
+  cursor: pointer;
+  padding: 4px 0;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.sort-area:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.header-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.filter-field {
+  min-width: 120px;
+  font-size: 12px;
+}
+
+.filter-field .mat-mdc-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.filter-field .mat-mdc-text-field-wrapper {
+  height: 36px;
+}
+
+.filter-field input {
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.filter-field .mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+
+/* No data message */
+.no-data {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.no-data-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #666;
+}
+
+.no-data-message mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  color: #ccc;
+}
+
+.no-data-message p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header-content {
+    min-height: 60px;
+  }
+
+  .filter-field {
+    min-width: 100px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}
+
+/* Column filters */
+.mat-column-name {
+  min-width: 220px;
+}
+
+.mat-column-address {
+  min-width: 280px;
+}
+
+.mat-column-city {
+  min-width: 140px;
+}
+
+.mat-column-area {
+  min-width: 120px;
+}
+
+.mat-column-type {
+  min-width: 100px;
+}
+
+.mat-column-availability {
+  min-width: 140px;
+}
+
+/* Status colors */
+.status-available {
+  color: #4caf50;
+  font-weight: 500;
+}
+
+.status-full {
+  color: #f44336;
+  font-weight: 500;
+}
+
+.status-limited {
+  color: #ff9800;
+  font-weight: 500;
+}
+
+/* Row hover effect */
+.mat-row:hover {
+  background-color: #f5f5f5;
+}
+
+/* Header styling */
+.mat-header-cell {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Sorting styles */
+.mat-sort-header-container {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  letter-spacing: normal;
+  outline: 0;
+}
+
+.mat-sort-header-pointer-left,
+.mat-sort-header-pointer-right,
+.mat-sort-header-pointer-middle {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  color: #757575;
+  transform: translateY(-50%);
+}
+
+.mat-sort-header-pointer-left,
+.mat-sort-header-pointer-right {
+  transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mat-sort-header-pointer-left {
+  transform-origin: right side;
+}
+
+.mat-sort-header-pointer-right {
+  transform-origin: left side;
+}
+
+.mat-sort-header-disabled .mat-sort-header-pointer-left,
+.mat-sort-header-disabled .mat-sort-header-pointer-right,
+.mat-sort-header-disabled .mat-sort-header-pointer-middle {
+  color: #ccc;
+}
+
+/* Miglioramenti per header con sorting */
+.sort-area.mat-sort-header-sorted {
+  color: #1976d2;
+}
+
+.sort-area.mat-sort-header-sorted .header-label {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.header-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Evitare conflitti tra filtro e sorting */
+.filter-field input:focus {
+  outline: none;
+}
+
+.mat-sort-header-arrow {
+  color: #1976d2;
+  font-size: 12px;
+}
+
+/* Hover effect per sorting */
+.mat-sort-header:hover:not(.mat-sort-header-disabled) {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.mat-sort-header.mat-sort-header-sorted {
+  color: #1976d2;
+}
+
+.mat-sort-header.mat-sort-header-sorted .header-label {
+  color: #1976d2;
+  font-weight: 600;
+}
